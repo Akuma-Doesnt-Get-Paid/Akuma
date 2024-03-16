@@ -1,1 +1,18 @@
-
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy CSS</title>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Copied to clipboard!");
+            }, () => {
+                alert("Failed to copy!");
+            });
+        }
+    </script>
+</head>
+<body>
+    <button id="copyButton" onclick="copyToClipboard('https://sheriffcarry.github.io/discord_url_fix.css')">Default_fix</button>
+    <button id="copyButton" onclick="copyToClipboard('https://sheriffcarry.github.io/Nameless.css')">Nameless</button>
+</body></html>
