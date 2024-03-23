@@ -28,6 +28,7 @@
 
 /* Removes Logo  */
 .interface .logo {
+	display: none !important;
     width: auto;
   visibility: hidden;
     z-index: 1;
@@ -1029,4 +1030,9 @@ box-shadow: none !important;
     height: 100px;
     text-align: center;
     display: inline-block;
+}
+
+.right > .svg-icon--skull {
+	display: none !important;
+	visibility: hidden !important;
 }
