@@ -760,13 +760,25 @@ Please do give credit if you decided to recolor :)
 
 .select-regions-regions .region:nth-child(2) span:after{
 	visibility: visible;
-	content: "EU";
+	content: "SA";
 	margin-left: -60px;
 }
 
 .select-regions-regions .region:nth-child(3) span:after{
 	visibility: visible;
-	content: "SEA";
+	content: "EU";
+	margin-left: -32px;
+}
+
+.select-regions-regions .region:nth-child(4) span:after{
+	visibility: visible;
+	content: "ASIA";
+	margin-left: -32px;
+}
+
+.select-regions-regions .region:nth-child(5) span:after{
+	visibility: visible;
+	content: "OCE";
 	margin-left: -32px;
 }
 
