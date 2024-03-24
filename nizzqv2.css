@@ -739,6 +739,8 @@ Please do give credit if you decided to recolor :)
 .select-regions-regions .region:nth-child(1) span,
 .select-regions-regions .region:nth-child(2) span,
 .select-regions-regions .region:nth-child(3) span,
+.select-regions-regions .region:nth-child(4) span,
+.select-regions-regions .region:nth-child(5) span,
 .select-mods-mods .mod:nth-child(1) span,
 .select-mods-mods .mod:nth-child(2) span {
 	visibility: hidden;
@@ -747,6 +749,8 @@ Please do give credit if you decided to recolor :)
 .select-regions-regions .region:nth-child(1) span:before,
 .select-regions-regions .region:nth-child(2) span:before,
 .select-regions-regions .region:nth-child(3) span:before,
+.select-regions-regions .region:nth-child(4) span:before,
+.select-regions-regions .region:nth-child(5) span:before,
 .select-mods-mods .mod:nth-child(1) span:before,
 .select-mods-mods .mod:nth-child(2) span:before {
 	visibility: visible;
