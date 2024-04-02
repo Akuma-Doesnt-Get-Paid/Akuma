@@ -328,9 +328,6 @@
     border-color: var(--trans) !important;
     background-color: var(--main) !important;
     border-radius: 5px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
     opacity: var(--opacity);
 }
 
@@ -400,12 +397,7 @@
 }
 
 .content>.quests-container {
-    height: min-content !important;
     padding: 0.5rem;
-}
-
-.quests-container>.quests {
-    padding: 0 !important;
 }
 
 .quests-container>.tabs {
@@ -445,8 +437,7 @@
 
 .quests-container>.quests>.subjects>.subject>.time-left {
     height: 0;
-    padding: 0;
-    transform: translatey(-50px);
+    transform: translatey(-105px);
 }
 
 .quests-container>.quests>.subjects>.subject>.quest>.right {
