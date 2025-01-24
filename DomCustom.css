@@ -1,1 +1,873 @@
-/* General */\n:root {\n    --dark: #141414;\n    --dark-transparent: #141414a3;\n    --accent: #acfa70;\n    --alt-accent: #4476ff;\n    --red: #ff4c4c;\n    --yellow: #edb846;\n    --orange: #ff932d;\n    --bg-image: url(https://irrvlo.xyz/topo.svg);\n}\n\n*::-webkit-scrollbar {\n    display: none !important;\n}\n\n.text-1,\n.text-2 {\n    text-shadow: unset !important;\n}\n\n/* HUD */\n.mini-map-cont {\n    left: 1rem !important;\n}\n\n.mini-map-cont div {\n    font-size: 1.5rem !important;\n    display: flex !important;\n    position: static !important;\n}\n\n.mini-map-cont .mod {\n    font-size: 1rem !important;\n}\n\n.timer {\n    position: fixed;\n    top: 1rem;\n    left: 50%;\n    transform: translateX(-50%);\n    background: transparent !important;\n    box-shadow: unset !important;\n    margin: unset !important;\n    padding: unset !important;\n    font-size: 1.6rem !important;\n}\n\n.kill-death {\n    position: fixed;\n    right: 1rem;\n    top: 1rem;\n    gap: 0.5rem;\n}\n\n.kill-bar-cont {\n    top: 3.5rem !important;\n}\n\n.kill-bar-item .weapon-cont {\n    height: 1.5rem;\n}\n\n.kill-bar-item {\n    background: var(--dark-transparent) !important;\n    margin-top: 0.25rem;\n    padding: 0.5rem !important;\n}\n\n.kill-death > div {\n    padding: 0.5rem !important;\n    border-radius: 0.25rem !important;\n    margin: unset !important;\n    box-shadow: unset !important;\n    background: var(--dark-transparent) !important;\n}\n\n.weapons-cont {\n    bottom: 1rem !important;\n    right: 1rem !important;\n}\n\n.state-weapon-active {\n    height: min-content !important;\n    justify-content: flex-end !important;\n    align-items: flex-end !important;\n}\n\n.state-weapon-active .quantity,\n.list-weapons {\n    display: none !important;\n}\n\n.desktop-game-interface .chat {\n    position: fixed !important;\n    top: 50%;\n    transform: translateY(-50%);\n    padding: unset;\n    left: 1rem;\n}\n\n.desktop-game-interface .chat > .info {\n    display: none;\n}\n\n.desktop-game-interface .chat > .messages {\n    min-height: 11rem !important;\n    margin: unset;\n    background: var(--dark-transparent) !important;\n    transition: background 0.2s ease;\n    border-radius: 0.25rem 0.25rem 0 0;\n    padding: 0.25rem;\n}\n\n.desktop-game-interface .chat > .messages .JOIN {\n    color: var(--accent);\n}\n\n.desktop-game-interface .chat > .messages .LEAVE {\n    color: var(--red);\n}\n\n.desktop-game-interface .chat .message .lvl {\n    color: var(--orange);\n}\n.desktop-game-interface .chat .message .author-name {\n    color: var(--yellow);\n}\n\n.desktop-game-interface > .chat .input:not(:focus) {\n    background: transparent;\n    height: 0rem;\n    padding: 0;\n}\n\n.desktop-game-interface > .chat:not(:focus-within) .messages {\n    background: transparent !important;\n}\n\n.desktop-game-interface .chat .input:focus {\n    height: 2.5rem !important;\n    transition: background 0.2s ease;\n    margin: unset;\n    padding: 0.5rem !important;\n    border-radius: 0 0 0.25rem 0.25rem;\n    background: var(--dark-transparent);\n}\n\n.desktop-game-interface .chat .input::placeholder {\n    color: #ffffff8c !important;\n    text-transform: lowercase;\n    font-weight: 400;\n    letter-spacing: 0.01rem;\n}\n\n.desktop-game-interface .chat .info-key-cont {\n    display: none;\n}\n\n.state-cont {\n    flex-direction: row !important;\n    max-width: 25rem !important;\n    gap: 0.5rem !important;\n    align-items: flex-end;\n    opacity: 1 !important;\n}\n\n.cont-endurance {\n    margin: unset !important;\n    padding: unset !important;\n    width: 4.5rem;\n    height: 4rem !important;\n    background: var(--dark-transparent) !important;\n    display: flex;\n    align-items: flex-end;\n    border-radius: 0.25rem !important;\n    transform: rotate(-90deg);\n    position: relative;\n}\n\n.cont-endurance:after {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    background: url(\"https://juice.irrvlo.xyz/juice_uncropped.png\");\n    background-size: cover;\n    background-position: center;\n    transform: rotate(90deg) scale(0.8);\n    filter: invert(1);\n    mix-blend-mode: screen;\n}\n\n.endurance-progress {\n    background: var(--alt-accent) !important;\n    height: 4rem !important;\n    border-radius: 0.25rem !important;\n    transition: width 0.2s linear !important;\n}\n\n.hp-cont {\n    flex-direction: column;\n    gap: 0.5rem;\n}\n\n.hp-title {\n    width: min-content;\n    align-items: flex-start;\n    background: transparent !important;\n    padding: unset !important;\n    font-size: 2.5rem !important;\n}\n\n.cont-hp {\n    margin: unset !important;\n    height: 1rem !important;\n    border-radius: 0.3rem !important;\n    background: var(--dark-transparent) !important;\n}\n\n.hp-progress {\n    height: 100% !important;\n    border-radius: 0.15rem !important;\n    transition: width 0.2s linear !important;\n}\n\n.team-score {\n    gap: 5.5rem;\n    top: 1rem !important;\n}\n\n.team-score .label {\n    margin: unset;\n    font-size: 1.75rem;\n    height: 2.25rem;\n    width: 4rem;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.team-score .label.red {\n    background: var(--red);\n}\n\n.team-score .label.blue {\n    background: var(--alt-accent);\n}\n\n/* Kill Card */\n.death-cont {\n    background: transparent !important;\n    justify-content: flex-end !important;\n}\n\n.death-cont .user-card {\n    margin-bottom: -0.7rem;\n    transform: scale(0.7);\n    padding: 1rem;\n    border: unset;\n    border-radius: 0.25rem !important;\n    box-shadow: unset;\n    max-width: 37.5rem;\n    background: var(--dark-transparent);\n}\n\n.user-card .avatar {\n    border-color: var(--dark) !important;\n    background-color: var(--dark) !important;\n}\n\n.user-card .killer-level {\n    color: white;\n    background: transparent;\n    padding: 0;\n    font-size: 3.5rem;\n}\n\n.user-card .killer-name {\n    align-items: flex-start;\n    margin-left: 0.75rem;\n}\n\n.user-card .killer-clan {\n    color: var(--accent);\n}\n\n\n.killer-name .killer-name {\n    margin-left: 0;\n}\n\n.user-card .label-killed {\n    display: none;\n}\n\n.user-card .name-gun:before {\n    content: \"[\"\n}\n\n.user-card .name-gun:after {\n    content: \"]\"\n}\n\n/* Solo Tab List */\n.tab-info {\n    background: var(--dark-transparent) !important;\n    box-shadow: unset !important;\n    border-radius: 0.25rem !important;\n    max-width: 35rem !important;\n}\n\n.tab-info .head {\n    background: linear-gradient(90deg, var(--orange), transparent) !important;\n    box-shadow: unset !important;\n    border: unset;\n    font-style: normal;\n    border-top-left-radius: 0.25rem;\n}\n\n.tab-info .head .server-id {\n    display: none;\n}\n\n.tab-info .list-value {\n    color: var(--accent)\n}\n\n/* Team Tab List */\n.tab-team-info {\n    background: var(--dark-transparent) !important;\n    box-shadow: unset !important;\n    border-radius: 0.25rem !important;\n    max-width: 60rem !important;\n}\n\n.tab-team-info .head {\n    background: transparent !important;\n    box-shadow: unset !important;\n}\n\n.tab-team-info .label.red {\n    border-top-left-radius: 0.25rem;\n    background: linear-gradient(90deg, var(--red), var(--dark-transparent));\n    justify-content: flex-start;\n    padding-left: 0.75rem;\n}\n\n.tab-team-info .label.blue {\n    border-top-right-radius: 0.25rem;\n    background: linear-gradient(-90deg, var(--alt-accent), var(--dark-transparent));\n    justify-content: flex-end;\n    padding-right: 0.75rem;\n}\n\n.player-list .list-value {\n    color: var(--accent);\n}\n\n.player-list .player-cont {\n    background: var(--dark-transparent) !important;\n    border-radius: 0.25rem;\n    padding: 0.25rem;\n}\n\n.player-cont .nickname.bolder {\n    color: var(--yellow);\n}\n\n.quests {\n    opacity: 0 !important;\n    transition: all 0.5s ease-in-out;\n}\n\n.quests:hover {\n    opacity: 1 !important;\n    transition: all 0.5s ease-in-out;\n}\n\n.quests:hover {\n    opacity: 1 !important;\n    transition: all 0.5s ease-in-out;\n}\n\n\n\n.play-content {\n    opacity: 0 !important;\n    transition: all 0.5s ease-in-out;\n}\n\n.play-content:hover {\n    opacity: 1 !important;\n    transition: all 0.5s ease-in-out;\n}\n\n.play-content:hover {\n    opacity: 1 !important;\n    transition: all 0.5s ease-in-out;\n}\n.invite-btn {\n    opacity: 0 !important;\n    transition: all 0.5s ease-in-out;\n}\n\n.invite-btn:hover {\n    opacity: 1 !important;\n    transition: all 0.5s ease-in-out;\n}\n\n.invite-btn:hover {\n    opacity: 1 !important;\n    transition: all 0.5s ease-in-out;\n}\n.moneys:hover {\n    opacity: 1 !important;\n    transition: all 0.5s ease-in-out;\n}\n\n/* Custom Backgorund */\n#app > div.interface.text-2 > div.background {\nbackground-image: var(--bg-image) !important;\nbackground-size: cover !important;\n}\n/* Custom Backgorund */\n#app > div.interface.text-2 > div.background {\n    background-image: var(--bg-image) !important;\n    background-size: cover !important;\n}\n\n.left-icons {\n\tborder-radius: 900px !important;\n\tbackground-color: #741b7400 !important;\n}\n.icon-btn {\n\tborder-radius: 20px !important;\n\tbackground-color: #8c128c00 !important;\n}\n\n\n#app>.end-modal {\n\tbackground: var(--bg-image) 100% / 100%;\n\tbackground-size: cover;\n}\n\n.end-modal>.bottom {\n\tvisibility: hidden;\n}\n.gun {\n\tborder-radius: 900px !important;\n\tbackground-color: #741b7400 !important;\n}\n.gun {\n\tborder-radius: 20px !important;\n\tbackground-color: #8c128c00 !important;\n}\n.head-right {\n\tborder-radius: 900px !important;\n\tbackground-color: #741b7400 !important;\n}\n.head-right {\n\tborder-radius: 20px !important;\n\tbackground-color: #8c128c00 !important;\n}\n.avatar-info {\n    border-radius: var(--card-rounded) !important;\n    flex-direction: row !important;\n}\n\n.avatar-info > .avatar {\n    border-radius: 999px !important;\n}\n.avatar > .avatar {\n    border-radius: 999px !important;\n}\n\n.avatar-info > .username {\n    display: flex !important;\n    flex-direction: column !important;\n    font-size: 12px !important;\n    margin-left: 8px !important;\n    font-weight: bold;\n}\n\n.avatar-info > .username::before {\n    display: block;\n    width: 100%;\n    content: \"PpugTTV\";\n    font-weight: 400;\n    margin-bottom: 0.25rem;\n}\n\n.avatar-info,\n.user-info {\n    height: auto !important;\n    margin-right: 0.5rem;\n}\n/* Background */\n#app > div.interface > div.background {\n    background-image: var(--bg-image) !important;\n    background-size: cover !important;\n}\n\n#app > div.interface > div.background > div.pattern-bg,\n#app > div.interface > div.background > div.bg-radial {\n    display: none !important;\n}\n\n\n/* Inventory */\n.inventory > .left,\n.inventory > .left > .bottom {\n    background: transparent !important;\n}\n\n.inventory > .left > .bottom .gun {\n    background: var(--card-lighter) !important;\n    border-radius: var(--card-rounded);\n}\n\n.inventory > .content > .tab-bar {\n    background: transparent !important;\n}\n\n.inventory .gun .gun-img {\n    top: 0.75rem !important;\n    margin-top: 0 !important;\n    max-height: 4.75rem !important;\n}\n\n.inventory .gun .name-gun {\n    top: auto !important;\n    bottom: 0 !important;\n    margin: 0 !important;\n    padding: 0.5rem 1rem !important;\n    justify-content: center !important;\n    font-size: 1.15rem !important;\n}\n\n.tab {\n    background: transparent !important;\n    transform: skew(0) !important;\n    border-radius: var(--card-rounded) !important;\n}\n\n.tab .name {\n    transform: skew(0) !important;\n}\n\n.tab.active,\n.tab.active-tab {\n    background: var(--dark-color) !important;\n    margin-top: 0 !important;\n    height: auto !important;\n    border: 0 !important;\n}\n.moneys {\n    display: block !important;\n    margin-left: 0 !important;\n    margin-top: 0 !important;\n    border-radius: var(--card-rounded) !important;\n    overflow: hidden !important;\n}\n\n.moneys .money {\n    justify-content: flex-start !important;\n    margin-right: 0;\n    font-size: 15px;\n    font-weight: bold;\n    padding: 0 1rem !important;\n    height: 45px !important;\n    border-radius: 0 !important;\n}\n\n.money.diamonds {\n    border-bottom-right-radius: var(--card-rounded);\n    border-bottom-left-radius: var(--card-rounded);\n}\n#left-icons {\n    bottom: unset !important;\n    background-color: var(--main) !important;\n    padding: 10px;\n    border-radius: 5px;\n    top: -3px;\n    left: 1270px;\n    opacity: var(--opacity);\n    text-shadow: var(--glow);\n    text-align: left;\n}\n\n/* Left Menu */\n.left-icons {\n    background: transparent !important;\n    position: relative;\n    bottom: 50px;\n}\n.left-icons,\n.icon-btn {\n    background: transparent !important;\n    border: none !important;\n    padding: 0 !important;\n    position: relative;\n    bottom: 50px;\n}\n.text-icon {\n    display: none !important;\n}\n.left-icons .icon-btn:hover {\n    border-top: transparent !important;\n    position: relative;\n    bottom: 50px;\n}\n.right-interface {\n    z-index: 1 !important;\n}\n.text-icon,\n.left-icons .icon-btn svg {\n    visibility: visible !important;\n}\n.soc-group:nth-child(1),\n.soc-group:nth-child(2) {\n    background: transparent !important;\n    border: none;\n    visibility: hidden;\n}\n.soc-group:nth-child(1):hover,\n.soc-group:nth-child(2):hover {\n    background: none !important;\n    transform: scale(1.5);\n    visibility: hidden;\n}\n#play-btn {\n    background: transparent !important;\n    box-shadow: 4px 4px 10px #0000 !important;\n}\n#play-btn .border-top,\n#play-btn .border-bottom {\n    background: none;\n}\n.select-mods-cont,\n.select-mods-cont > hr {\n    background: transparent!important;\n    margin-right: 500px;\n    border: 1px solid var(--asscentColor);\n}\n.custom-checkbox > input:checked + span[data-v-47e1b746]:before {\n    background-color: var(--asscentColor);\n    border-color: var(--asscentColor);\n}\n.soc-group[data-v-f6928a74],\n.text-soc[data-v-26102dd2] {\n    display: none !important;\n}\n.private-btn > span[data-v-47e1b746] {\n    content: url(https://media.discordapp.net/attachments/523517791886770188/1014943556806394018/261370-200.png);\n    position: fixed;\n    left: 40px;\n    width: 40px;\n}\n.select-mod,\n.select-region {\n    background: transparent !important;\n    border-right: none !important;\n    border-left: none !important;\n    border-top: none !important;\n    border-bottom: none !important;\n}\n.select-regions-cont {\n    background: transparent !important;\n    border-right: none !important;\n    border-left: none !important;\n    border-top: none !important;\n    border-bottom: none !important;\n}\n/* HUD */\n.state-cont .timer {\n      position: fixed;\n      width: 300px;\n      left: 10%;\n      margin-left: -160px ;\n      background: transparent !important;\n      box-shadow: none !important;\n}\n\n.cont-endurance {\n    margin-left: 1.5%;\n}\n.endurance-progress {\n    background-color: var(--asscentColor) !important;\n}\n\n\n/* Left Menu */\n.left-icons {\n    background: transparent !important;\n}\n.left-icons,\n.icon-btn {\n    background: transparent !important;\n    border: none !important;\n    padding: 0 !important;\n}\n#left-icons {\n    flex-direction: row-reverse;\n}\n.text-icon {\n    display: none !important;\n}\n.left-icons .icon-btn:hover {\n    border-top: transparent !important;\n}\n#left-icons {\n    display: flex;\n    flex-direction: row;\n    align-items: flex-start;\n    position: absolute;\n    left: 13% !important;\n    top: 100% !important;\n    z-index: 0 !important;\n    transform-origin: top left;\n}\n.right-interface {\n    z-index: 1 !important;\n}\n.text-icon,\n.left-icons .icon-btn svg {\n    display: show !important;\n}\n\n/* diamonds */\n.diamonds[data-v-e3674cae]::before {\n    content: \"\";\n    display: block;\n    height: 25px;\n    /* Adjust as needed */\n    background-image: url('');\n    background-size: contain;\n    background-repeat: no-repeat;\n}\n/* coins */\n.money[data-v-e3674cae]::before {\n    content: \"\";\n    display: block;\n    width: 25px;\n    /* Adjust as needed */\n    height: 20px;\n    /* Adjust as needed */\n    background-image: url('https://cdn3.emoji.gg/emojis/9748_robux.png');\n    background-size: contain;\n    background-repeat: no-repeat;\n}\n.coin-icon[data-v-924e79c6] {\n    display: none;\n}\n/* avatar */\n.avatar[data-v-e3674cae]::before {\n    content: \"\";\n    display: block;\n    width: 60px;\n    /* Adjust as needed */\n    height: 200px;\n    /* Adjust as needed */\n    background-image: url('https://cdn.discordapp.com/avatars/1169111190824308768/9b228bfebae18302c598a42c09426ecf.png?size=1024');\n    background-size: contain;\n    background-repeat: no-repeat;\n}\n.coin-icon[data-v-924e79c6] {\n    display: none;\n}\n/* profile */\n.avatar [data-v-e3674cae]::before {\n    content: \"\";\n    display: block;\n    width: 25px;\n    /* Adjust as needed */\n    height: 200px;\n    /* Adjust as needed */\n    background-image: url('https://cdn.discordapp.com/avatars/1169111190824308768/9b228bfebae18302c598a42c09426ecf.png?size=1024');\n    background-size: contain;\n    background-repeat: no-repeat;\n}\n@keyframes rainbow{\n\t\t100%,0%{\n\t\t\tcolor: rgb(255,0,0);\n\t\t}\n\t\t8%{\n\t\t\tcolor: rgb(255,127,0);\n\t\t}\n\t\t16%{\n\t\t\tcolor: rgb(255,255,0);\n\t\t}\n\t\t25%{\n\t\t\tcolor: rgb(127,255,0);\n\t\t}\n\t\t33%{\n\t\t\tcolor: rgb(0,255,0);\n\t\t}\n\t\t41%{\n\t\t\tcolor: rgb(0,255,127);\n\t\t}\n\t\t50%{\n\t\t\tcolor: rgb(0,255,255);\n\t\t}\n\t\t58%{\n\t\t\tcolor: rgb(0,127,255);\n\t\t}\n\t\t66%{\n\t\t\tcolor: rgb(0,0,255);\n\t\t}\n\t\t75%{\n\t\t\tcolor: rgb(127,0,255);\n\t\t}\n\t\t83%{\n\t\t\tcolor: rgb(255,0,255);\n\t\t}\n\t\t91%{\n\t\t\tcolor: rgb(255,0,127);\n\t\t}\n}\n .clan-tag {\n\tanimation: rainbow 1.3s linear infinite;\n}\n/* Background */\n.pattern-bg,\n.bg-radial {\n    display: none;\n}\n/* Loading Scene*/\n.loading-scene .progress {\n    background: -webkit-gradient(linear, left top, right top, from(#84a1ff), to(#39ffd4)) !important;\n    background: linear-gradient(to right, #84a1ff, #39ffd4) !important;\n}\n\n/* Background */\n.pattern-bg,\n.bg-radial {\n    display: none;\n}\n\n.background {\n    background: transparent !important;\n    border-radius: 0;\n}\n#version,\n#triangles,\n#fpsAvg {\n    display: none !important;\n}\n\n#overlay {\n    font-family: Consolas !important;\n    font-size: 10px !important;\n    top: 125px !important;\n    left: 30px !important;\n}\n.interface .moneys{\n    position: relative;\n    overflow: hidden;\n}\n.interface .moneys:after{\n    content: \"\";\n    position: absolute;\n    width: 100%;\n    height: 70px;\n     background: url('file:///C:/Users/Public.DESKTOP-HMN7ECH/Desktop/download.png') 100% / 100% no-repeat;\n     left: 0;\n     top: -18px;\n     background-size: 300px;\n     background-position-x: -40px;\n}
+/* General */
+:root {
+    --dark: #141414;
+    --dark-transparent: #141414a3;
+    --accent: #acfa70;
+    --alt-accent: #4476ff;
+    --red: #ff4c4c;
+    --yellow: #edb846;
+    --orange: #ff932d;
+    --bg-image: url(https://i.imgur.com/yVsOENz.jpeg);
+}
+
+*::-webkit-scrollbar {
+    display: none !important;
+}
+
+.text-1,
+.text-2 {
+    text-shadow: unset !important;
+}
+
+/* HUD */
+.mini-map-cont {
+    left: 1rem !important;
+}
+
+.mini-map-cont div {
+    font-size: 1.5rem !important;
+    display: flex !important;
+    position: static !important;
+}
+
+.mini-map-cont .mod {
+    font-size: 1rem !important;
+}
+
+.timer {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent !important;
+    box-shadow: unset !important;
+    margin: unset !important;
+    padding: unset !important;
+    font-size: 1.6rem !important;
+}
+
+.kill-death {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    gap: 0.5rem;
+}
+
+.kill-bar-cont {
+    top: 3.5rem !important;
+}
+
+.kill-bar-item .weapon-cont {
+    height: 1.5rem;
+}
+
+.kill-bar-item {
+    background: var(--dark-transparent) !important;
+    margin-top: 0.25rem;
+    padding: 0.5rem !important;
+}
+
+.kill-death > div {
+    padding: 0.5rem !important;
+    border-radius: 0.25rem !important;
+    margin: unset !important;
+    box-shadow: unset !important;
+    background: var(--dark-transparent) !important;
+}
+
+.weapons-cont {
+    bottom: 1rem !important;
+    right: 1rem !important;
+}
+
+.state-weapon-active {
+    height: min-content !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+}
+
+.state-weapon-active .quantity,
+.list-weapons {
+    display: none !important;
+}
+
+.desktop-game-interface .chat {
+    position: fixed !important;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: unset;
+    left: 1rem;
+}
+
+.desktop-game-interface .chat > .info {
+    display: none;
+}
+
+.desktop-game-interface .chat > .messages {
+    min-height: 11rem !important;
+    margin: unset;
+    background: var(--dark-transparent) !important;
+    transition: background 0.2s ease;
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 0.25rem;
+}
+
+.desktop-game-interface .chat > .messages .JOIN {
+    color: var(--accent);
+}
+
+.desktop-game-interface .chat > .messages .LEAVE {
+    color: var(--red);
+}
+
+.desktop-game-interface .chat .message .lvl {
+    color: var(--orange);
+}
+.desktop-game-interface .chat .message .author-name {
+    color: var(--yellow);
+}
+
+.desktop-game-interface > .chat .input:not(:focus) {
+    background: transparent;
+    height: 0rem;
+    padding: 0;
+}
+
+.desktop-game-interface > .chat:not(:focus-within) .messages {
+    background: transparent !important;
+}
+
+.desktop-game-interface .chat .input:focus {
+    height: 2.5rem !important;
+    transition: background 0.2s ease;
+    margin: unset;
+    padding: 0.5rem !important;
+    border-radius: 0 0 0.25rem 0.25rem;
+    background: var(--dark-transparent);
+}
+
+.desktop-game-interface .chat .input::placeholder {
+    color: #ffffff8c !important;
+    text-transform: lowercase;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+}
+
+.desktop-game-interface .chat .info-key-cont {
+    display: none;
+}
+
+.state-cont {
+    flex-direction: row !important;
+    max-width: 25rem !important;
+    gap: 0.5rem !important;
+    align-items: flex-end;
+    opacity: 1 !important;
+}
+
+.cont-endurance {
+    margin: unset !important;
+    padding: unset !important;
+    width: 4.5rem;
+    height: 4rem !important;
+    background: var(--dark-transparent) !important;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 0.25rem !important;
+    transform: rotate(-90deg);
+    position: relative;
+}
+
+.cont-endurance:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: url("--bg-image");
+    background-size: cover;
+    background-position: center;
+    transform: rotate(90deg) scale(0.8);
+    filter: invert(1);
+    mix-blend-mode: screen;
+}
+
+.endurance-progress {
+    background: var(--alt-accent) !important;
+    height: 4rem !important;
+    border-radius: 0.25rem !important;
+    transition: width 0.2s linear !important;
+}
+
+.hp-cont {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hp-title {
+    width: min-content;
+    align-items: flex-start;
+    background: transparent !important;
+    padding: unset !important;
+    font-size: 2.5rem !important;
+}
+
+.cont-hp {
+    margin: unset !important;
+    height: 1rem !important;
+    border-radius: 0.3rem !important;
+    background: var(--dark-transparent) !important;
+}
+
+.hp-progress {
+    height: 100% !important;
+    border-radius: 0.15rem !important;
+    transition: width 0.2s linear !important;
+}
+
+.team-score {
+    gap: 5.5rem;
+    top: 1rem !important;
+}
+
+.team-score .label {
+    margin: unset;
+    font-size: 1.75rem;
+    height: 2.25rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-score .label.red {
+    background: var(--red);
+}
+
+.team-score .label.blue {
+    background: var(--alt-accent);
+}
+
+/* Kill Card */
+.death-cont {
+    background: transparent !important;
+    justify-content: flex-end !important;
+}
+
+.death-cont .user-card {
+    margin-bottom: -0.7rem;
+    transform: scale(0.7);
+    padding: 1rem;
+    border: unset;
+    border-radius: 0.25rem !important;
+    box-shadow: unset;
+    max-width: 37.5rem;
+    background: var(--dark-transparent);
+}
+
+.user-card .avatar {
+    border-color: var(--dark) !important;
+    background-color: var(--dark) !important;
+}
+
+.user-card .killer-level {
+    color: white;
+    background: transparent;
+    padding: 0;
+    font-size: 3.5rem;
+}
+
+.user-card .killer-name {
+    align-items: flex-start;
+    margin-left: 0.75rem;
+}
+
+.user-card .killer-clan {
+    color: var(--accent);
+}
+
+
+.killer-name .killer-name {
+    margin-left: 0;
+}
+
+.user-card .label-killed {
+    display: none;
+}
+
+.user-card .name-gun:before {
+    content: "["
+}
+
+.user-card .name-gun:after {
+    content: "]"
+}
+
+/* Solo Tab List */
+.tab-info {
+    background: var(--dark-transparent) !important;
+    box-shadow: unset !important;
+    border-radius: 0.25rem !important;
+    max-width: 35rem !important;
+}
+
+.tab-info .head {
+    background: linear-gradient(90deg, var(--orange), transparent) !important;
+    box-shadow: unset !important;
+    border: unset;
+    font-style: normal;
+    border-top-left-radius: 0.25rem;
+}
+
+.tab-info .head .server-id {
+    display: none;
+}
+
+.tab-info .list-value {
+    color: var(--accent)
+}
+
+/* Team Tab List */
+.tab-team-info {
+    background: var(--dark-transparent) !important;
+    box-shadow: unset !important;
+    border-radius: 0.25rem !important;
+    max-width: 60rem !important;
+}
+
+.tab-team-info .head {
+    background: transparent !important;
+    box-shadow: unset !important;
+}
+
+.tab-team-info .label.red {
+    border-top-left-radius: 0.25rem;
+    background: linear-gradient(90deg, var(--red), var(--dark-transparent));
+    justify-content: flex-start;
+    padding-left: 0.75rem;
+}
+
+.tab-team-info .label.blue {
+    border-top-right-radius: 0.25rem;
+    background: linear-gradient(-90deg, var(--alt-accent), var(--dark-transparent));
+    justify-content: flex-end;
+    padding-right: 0.75rem;
+}
+
+.player-list .list-value {
+    color: var(--accent);
+}
+
+.player-list .player-cont {
+    background: var(--dark-transparent) !important;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+
+.player-cont .nickname.bolder {
+    color: var(--yellow);
+}
+
+.quests {
+    opacity: 0 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.quests:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.quests:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.play-content {
+    opacity: 0 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.play-content:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.play-content:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+.invite-btn {
+    opacity: 0 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.invite-btn:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.invite-btn:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+.moneys:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Custom Backgorund */
+#app > div.interface.text-2 > div.background {
+background-image: var(--bg-image) !important;
+background-size: cover !important;
+}
+/* Custom Backgorund */
+#app > div.interface.text-2 > div.background {
+    background-image: var(--bg-image) !important;
+    background-size: cover !important;
+}
+
+.left-icons {
+	border-radius: 900px !important;
+	background-color: #741b7400 !important;
+}
+.icon-btn {
+	border-radius: 20px !important;
+	background-color: #8c128c00 !important;
+}
+
+
+#app>.end-modal {
+	background: var(--bg-image) 100% / 100%;
+	background-size: cover;
+}
+
+.end-modal>.bottom {
+	visibility: hidden;
+}
+.gun {
+	border-radius: 900px !important;
+	background-color: #741b7400 !important;
+}
+.gun {
+	border-radius: 20px !important;
+	background-color: #8c128c00 !important;
+}
+.head-right {
+	border-radius: 900px !important;
+	background-color: #741b7400 !important;
+}
+.head-right {
+	border-radius: 20px !important;
+	background-color: #8c128c00 !important;
+}
+.avatar-info {
+    border-radius: var(--card-rounded) !important;
+    flex-direction: row !important;
+}
+
+.avatar-info > .avatar {
+    border-radius: 999px !important;
+}
+.avatar > .avatar {
+    border-radius: 999px !important;
+}
+
+.avatar-info > .username {
+    display: flex !important;
+    flex-direction: column !important;
+    font-size: 12px !important;
+    margin-left: 8px !important;
+    font-weight: bold;
+}
+
+.avatar-info > .username::before {
+    display: block;
+    width: 100%;
+    content: "Dom :)";
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+.avatar-info,
+.user-info {
+    height: auto !important;
+    margin-right: 0.5rem;
+}
+/* Background */
+#app > div.interface > div.background {
+    background-image: var(--bg-image) !important;
+    background-size: cover !important;
+}
+
+#app > div.interface > div.background > div.pattern-bg,
+#app > div.interface > div.background > div.bg-radial {
+    display: none !important;
+}
+
+
+/* Inventory */
+.inventory > .left,
+.inventory > .left > .bottom {
+    background: transparent !important;
+}
+
+.inventory > .left > .bottom .gun {
+    background: var(--card-lighter) !important;
+    border-radius: var(--card-rounded);
+}
+
+.inventory > .content > .tab-bar {
+    background: transparent !important;
+}
+
+.inventory .gun .gun-img {
+    top: 0.75rem !important;
+    margin-top: 0 !important;
+    max-height: 4.75rem !important;
+}
+
+.inventory .gun .name-gun {
+    top: auto !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0.5rem 1rem !important;
+    justify-content: center !important;
+    font-size: 1.15rem !important;
+}
+
+.tab {
+    background: transparent !important;
+    transform: skew(0) !important;
+    border-radius: var(--card-rounded) !important;
+}
+
+.tab .name {
+    transform: skew(0) !important;
+}
+
+.tab.active,
+.tab.active-tab {
+    background: var(--dark-color) !important;
+    margin-top: 0 !important;
+    height: auto !important;
+    border: 0 !important;
+}
+.moneys {
+    display: block !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    border-radius: var(--card-rounded) !important;
+    overflow: hidden !important;
+}
+
+.moneys .money {
+    justify-content: flex-start !important;
+    margin-right: 0;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 1rem !important;
+    height: 45px !important;
+    border-radius: 0 !important;
+}
+
+.money.diamonds {
+    border-bottom-right-radius: var(--card-rounded);
+    border-bottom-left-radius: var(--card-rounded);
+}
+#left-icons {
+    bottom: unset !important;
+    background-color: var(--main) !important;
+    padding: 10px;
+    border-radius: 5px;
+    top: -3px;
+    left: 1270px;
+    opacity: var(--opacity);
+    text-shadow: var(--glow);
+    text-align: left;
+}
+
+/* Left Menu */
+.left-icons {
+    background: transparent !important;
+    position: relative;
+    bottom: 50px;
+}
+.left-icons,
+.icon-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    position: relative;
+    bottom: 50px;
+}
+.text-icon {
+    display: none !important;
+}
+.left-icons .icon-btn:hover {
+    border-top: transparent !important;
+    position: relative;
+    bottom: 50px;
+}
+.right-interface {
+    z-index: 1 !important;
+}
+.text-icon,
+.left-icons .icon-btn svg {
+    visibility: visible !important;
+}
+.soc-group:nth-child(1),
+.soc-group:nth-child(2) {
+    background: transparent !important;
+    border: none;
+    visibility: hidden;
+}
+.soc-group:nth-child(1):hover,
+.soc-group:nth-child(2):hover {
+    background: none !important;
+    transform: scale(1.5);
+    visibility: hidden;
+}
+#play-btn {
+    background: transparent !important;
+    box-shadow: 4px 4px 10px #0000 !important;
+}
+#play-btn .border-top,
+#play-btn .border-bottom {
+    background: none;
+}
+.select-mods-cont,
+.select-mods-cont > hr {
+    background: transparent!important;
+    margin-right: 500px;
+    border: 1px solid var(--asscentColor);
+}
+.custom-checkbox > input:checked + span[data-v-47e1b746]:before {
+    background-color: var(--asscentColor);
+    border-color: var(--asscentColor);
+}
+.soc-group[data-v-f6928a74],
+.text-soc[data-v-26102dd2] {
+    display: none !important;
+}
+.private-btn > span[data-v-47e1b746] {
+    content: url(https://media.discordapp.net/attachments/523517791886770188/1014943556806394018/261370-200.png);
+    position: fixed;
+    left: 40px;
+    width: 40px;
+}
+.select-mod,
+.select-region {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.select-regions-cont {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+/* HUD */
+.state-cont .timer {
+      position: fixed;
+      width: 300px;
+      left: 10%;
+      margin-left: -160px ;
+      background: transparent !important;
+      box-shadow: none !important;
+}
+
+.cont-endurance {
+    margin-left: 1.5%;
+}
+.endurance-progress {
+    background-color: var(--asscentColor) !important;
+}
+
+
+/* Left Menu */
+.left-icons {
+    background: transparent !important;
+}
+.left-icons,
+.icon-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+#left-icons {
+    flex-direction: row-reverse;
+}
+.text-icon {
+    display: none !important;
+}
+.left-icons .icon-btn:hover {
+    border-top: transparent !important;
+}
+#left-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: absolute;
+    left: 13% !important;
+    top: 100% !important;
+    z-index: 0 !important;
+    transform-origin: top left;
+}
+.right-interface {
+    z-index: 1 !important;
+}
+.text-icon,
+.left-icons .icon-btn svg {
+    display: show !important;
+}
+
+/* diamonds */
+.diamonds[data-v-e3674cae]::before {
+    content: "";
+    display: block;
+    height: 25px;
+    /* Adjust as needed */
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* coins */
+.money[data-v-e3674cae]::before {
+    content: "";
+    display: block;
+    width: 25px;
+    /* Adjust as needed */
+    height: 20px;
+    /* Adjust as needed */
+    background-image: url('https://cdn3.emoji.gg/emojis/9748_robux.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.coin-icon[data-v-924e79c6] {
+    display: none;
+}
+/* avatar */
+.avatar[data-v-e3674cae]::before {
+    content: "";
+    display: block;
+    width: 60px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+    background-image: url('https://cdn.discordapp.com/widget-avatars/mSDZ4194Mo0q-xM1H2XOyWq4FniiumXVcZQdAcliLNY/t6Ra0gt36Lh0UpAirpZHOkfCTmQDAD9c7kMIctr6Av3qSBaoSS2eUJW-vGwuNdLP1WNJkWJv9sStI2TU4Sahz9YcS4vP0-g3xRpGYqSjKTQ91YJeAYwpuA3OMh96Uu6-gmiq7DLhJicBqQs');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.coin-icon[data-v-924e79c6] {
+    display: none;
+}
+/* profile */
+.avatar [data-v-e3674cae]::before {
+    content: "";
+    display: block;
+    width: 25px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+    background-image: url('https://cdn.discordapp.com/widget-avatars/mSDZ4194Mo0q-xM1H2XOyWq4FniiumXVcZQdAcliLNY/t6Ra0gt36Lh0UpAirpZHOkfCTmQDAD9c7kMIctr6Av3qSBaoSS2eUJW-vGwuNdLP1WNJkWJv9sStI2TU4Sahz9YcS4vP0-g3xRpGYqSjKTQ91YJeAYwpuA3OMh96Uu6-gmiq7DLhJicBqQs');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+}
+ .clan-tag {
+	animation: rainbow 1.3s linear infinite;
+}
+/* Background */
+.pattern-bg,
+.bg-radial {
+    display: none;
+}
+/* Loading Scene*/
+.loading-scene .progress {
+    background: -webkit-gradient(linear, left top, right top, from(#84a1ff), to(#39ffd4)) !important;
+    background: linear-gradient(to right, #84a1ff, #39ffd4) !important;
+}
+
+/* Background */
+.pattern-bg,
+.bg-radial {
+    display: none;
+}
+
+.background {
+    background: transparent !important;
+    border-radius: 0;
+}
+#version,
+#triangles,
+#fpsAvg {
+    display: none !important;
+}
+
+#overlay {
+    font-family: Consolas !important;
+    font-size: 10px !important;
+    top: 125px !important;
+    left: 30px !important;
+}
+.interface .moneys{
+    position: relative;
+    overflow: hidden;
+}
+.interface .moneys:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 70px;
+     background: url('file:///C:/Users/Public.DESKTOP-HMN7ECH/Desktop/download.png') 100% / 100% no-repeat;
+     left: 0;
+     top: -18px;
+     background-size: 300px;
+     background-position-x: -40px;
+}
