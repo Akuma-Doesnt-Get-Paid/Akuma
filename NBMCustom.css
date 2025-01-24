@@ -730,31 +730,6 @@ background-size: cover !important;
     display: show !important;
 }
 
-/* diamonds */
-.diamonds[data-v-e3674cae]::before {
-    content: "";
-    display: block;
-    height: 25px;
-    /* Adjust as needed */
-    background-image: url('');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-/* coins */
-.money[data-v-e3674cae]::before {
-    content: "";
-    display: block;
-    width: 25px;
-    /* Adjust as needed */
-    height: 20px;
-    /* Adjust as needed */
-    background-image: url('https://cdn3.emoji.gg/emojis/9748_robux.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.coin-icon[data-v-924e79c6] {
-    display: none;
-}
 /* avatar */
 .avatar[data-v-e3674cae]::before {
     content: "";
