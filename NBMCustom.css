@@ -738,7 +738,7 @@ background-size: cover !important;
     /* Adjust as needed */
     height: 200px;
     /* Adjust as needed */
-    background-image: url('https://i.imgur.com/aZ1qy8K.jpeg');
+    background-image: url('-');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -753,7 +753,7 @@ background-size: cover !important;
     /* Adjust as needed */
     height: 200px;
     /* Adjust as needed */
-    background-image: url('https://i.imgur.com/aZ1qy8K.jpeg');
+    background-image: url('-');
     background-size: contain;
     background-repeat: no-repeat;
 }
