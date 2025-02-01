@@ -1,0 +1,945 @@
+/* General */
+:root {
+    --dark: #141414;
+    --dark-transparent: #141414a3;
+    --accent: #acfa70;
+    --alt-accent: #4476ff;
+    --red: #ff4c4c;
+    --yellow: #edb846;
+    --orange: #ff932d;
+    --bg-image: url(https://irrvlo.xyz/topo.svg);
+}
+
+*::-webkit-scrollbar {
+    display: none !important;
+}
+
+.text-1,
+.text-2 {
+    text-shadow: unset !important;
+}
+
+/* HUD */
+.mini-map-cont {
+    left: 1rem !important;
+}
+
+.mini-map-cont div {
+    font-size: 1.5rem !important;
+    display: flex !important;
+    position: static !important;
+}
+
+.mini-map-cont .mod {
+    font-size: 1rem !important;
+}
+
+.timer {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent !important;
+    box-shadow: unset !important;
+    margin: unset !important;
+    padding: unset !important;
+    font-size: 1.6rem !important;
+}
+
+.kill-death {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    gap: 0.5rem;
+}
+
+.kill-bar-cont {
+    top: 3.5rem !important;
+}
+
+.kill-bar-item .weapon-cont {
+    height: 1.5rem;
+}
+
+.kill-bar-item {
+    background: var(--dark-transparent) !important;
+    margin-top: 0.25rem;
+    padding: 0.5rem !important;
+}
+
+.kill-death > div {
+    padding: 0.5rem !important;
+    border-radius: 0.25rem !important;
+    margin: unset !important;
+    box-shadow: unset !important;
+    background: var(--dark-transparent) !important;
+}
+
+.weapons-cont {
+    bottom: 1rem !important;
+    right: 1rem !important;
+}
+
+.state-weapon-active {
+    height: min-content !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+}
+
+.state-weapon-active .quantity,
+.list-weapons {
+    display: none !important;
+}
+
+.desktop-game-interface .chat {
+    position: fixed !important;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: unset;
+    left: 1rem;
+}
+
+.desktop-game-interface .chat > .info {
+    display: none;
+}
+
+.desktop-game-interface .chat > .messages {
+    min-height: 11rem !important;
+    margin: unset;
+    background: var(--dark-transparent) !important;
+    transition: background 0.2s ease;
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 0.25rem;
+}
+
+.desktop-game-interface .chat > .messages .JOIN {
+    color: var(--accent);
+}
+
+.desktop-game-interface .chat > .messages .LEAVE {
+    color: var(--red);
+}
+
+.desktop-game-interface .chat .message .lvl {
+    color: var(--orange);
+}
+.desktop-game-interface .chat .message .author-name {
+    color: var(--yellow);
+}
+
+.desktop-game-interface > .chat .input:not(:focus) {
+    background: transparent;
+    height: 0rem;
+    padding: 0;
+}
+
+.desktop-game-interface > .chat:not(:focus-within) .messages {
+    background: transparent !important;
+}
+
+.desktop-game-interface .chat .input:focus {
+    height: 2.5rem !important;
+    transition: background 0.2s ease;
+    margin: unset;
+    padding: 0.5rem !important;
+    border-radius: 0 0 0.25rem 0.25rem;
+    background: var(--dark-transparent);
+}
+
+.desktop-game-interface .chat .input::placeholder {
+    color: #ffffff8c !important;
+    text-transform: lowercase;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+}
+
+.desktop-game-interface .chat .info-key-cont {
+    display: none;
+}
+
+.state-cont {
+    flex-direction: row !important;
+    max-width: 25rem !important;
+    gap: 0.5rem !important;
+    align-items: flex-end;
+    opacity: 1 !important;
+}
+
+.cont-endurance {
+    margin: unset !important;
+    padding: unset !important;
+    width: 4.5rem;
+    height: 4rem !important;
+    background: var(--dark-transparent) !important;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 0.25rem !important;
+    transform: rotate(-90deg);
+    position: relative;
+}
+
+.cont-endurance:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: url("https://juice.irrvlo.xyz/juice_uncropped.png");
+    background-size: cover;
+    background-position: center;
+    transform: rotate(90deg) scale(0.8);
+    filter: invert(1);
+    mix-blend-mode: screen;
+}
+
+.endurance-progress {
+    background: var(--alt-accent) !important;
+    height: 4rem !important;
+    border-radius: 0.25rem !important;
+    transition: width 0.2s linear !important;
+}
+
+.hp-cont {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hp-title {
+    width: min-content;
+    align-items: flex-start;
+    background: transparent !important;
+    padding: unset !important;
+    font-size: 2.5rem !important;
+}
+
+.cont-hp {
+    margin: unset !important;
+    height: 1rem !important;
+    border-radius: 0.3rem !important;
+    background: var(--dark-transparent) !important;
+}
+
+.hp-progress {
+    height: 100% !important;
+    border-radius: 0.15rem !important;
+    transition: width 0.2s linear !important;
+}
+
+.team-score {
+    gap: 5.5rem;
+    top: 1rem !important;
+}
+
+.team-score .label {
+    margin: unset;
+    font-size: 1.75rem;
+    height: 2.25rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-score .label.red {
+    background: var(--red);
+}
+
+.team-score .label.blue {
+    background: var(--alt-accent);
+}
+
+/* Kill Card */
+.death-cont {
+    background: transparent !important;
+    justify-content: flex-end !important;
+}
+
+.death-cont .user-card {
+    margin-bottom: -0.7rem;
+    transform: scale(0.7);
+    padding: 1rem;
+    border: unset;
+    border-radius: 0.25rem !important;
+    box-shadow: unset;
+    max-width: 37.5rem;
+    background: var(--dark-transparent);
+}
+
+.user-card .avatar {
+    border-color: var(--dark) !important;
+    background-color: var(--dark) !important;
+}
+
+.user-card .killer-level {
+    color: white;
+    background: transparent;
+    padding: 0;
+    font-size: 3.5rem;
+}
+
+.user-card .killer-name {
+    align-items: flex-start;
+    margin-left: 0.75rem;
+}
+
+.user-card .killer-clan {
+    color: var(--accent);
+}
+
+
+.killer-name .killer-name {
+    margin-left: 0;
+}
+
+.user-card .label-killed {
+    display: none;
+}
+
+.user-card .name-gun:before {
+    content: "["
+}
+
+.user-card .name-gun:after {
+    content: "]"
+}
+
+/* Solo Tab List */
+.tab-info {
+    background: var(--dark-transparent) !important;
+    box-shadow: unset !important;
+    border-radius: 0.25rem !important;
+    max-width: 35rem !important;
+}
+
+.tab-info .head {
+    background: linear-gradient(90deg, var(--orange), transparent) !important;
+    box-shadow: unset !important;
+    border: unset;
+    font-style: normal;
+    border-top-left-radius: 0.25rem;
+}
+
+.tab-info .head .server-id {
+    display: none;
+}
+
+.tab-info .list-value {
+    color: var(--accent)
+}
+
+/* Team Tab List */
+.tab-team-info {
+    background: var(--dark-transparent) !important;
+    box-shadow: unset !important;
+    border-radius: 0.25rem !important;
+    max-width: 60rem !important;
+}
+
+.tab-team-info .head {
+    background: transparent !important;
+    box-shadow: unset !important;
+}
+
+.tab-team-info .label.red {
+    border-top-left-radius: 0.25rem;
+    background: linear-gradient(90deg, var(--red), var(--dark-transparent));
+    justify-content: flex-start;
+    padding-left: 0.75rem;
+}
+
+.tab-team-info .label.blue {
+    border-top-right-radius: 0.25rem;
+    background: linear-gradient(-90deg, var(--alt-accent), var(--dark-transparent));
+    justify-content: flex-end;
+    padding-right: 0.75rem;
+}
+
+.player-list .list-value {
+    color: var(--accent);
+}
+
+.player-list .player-cont {
+    background: var(--dark-transparent) !important;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+
+.player-cont .nickname.bolder {
+    color: var(--yellow);
+}
+
+.quests {
+    opacity: 0 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.quests:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.quests:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.play-content {
+    opacity: 0 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.play-content:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.play-content:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+.invite-btn {
+    opacity: 0 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.invite-btn:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.invite-btn:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+.moneys:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Custom Backgorund */
+#app > div.interface.text-2 > div.background {
+background-image: var(--bg-image) !important;
+background-size: cover !important;
+}
+/* Custom Backgorund */
+#app > div.interface.text-2 > div.background {
+    background-image: var(--bg-image) !important;
+    background-size: cover !important;
+}
+
+.left-icons {
+	border-radius: 900px !important;
+	background-color: #741b7400 !important;
+}
+.icon-btn {
+	border-radius: 20px !important;
+	background-color: #8c128c00 !important;
+}
+
+
+#app>.end-modal {
+	background: var(--bg-image) 100% / 100%;
+	background-size: cover;
+}
+
+.end-modal>.bottom {
+	visibility: hidden;
+}
+.gun {
+	border-radius: 900px !important;
+	background-color: #741b7400 !important;
+}
+.gun {
+	border-radius: 20px !important;
+	background-color: #8c128c00 !important;
+}
+.head-right {
+	border-radius: 900px !important;
+	background-color: #741b7400 !important;
+}
+.head-right {
+	border-radius: 20px !important;
+	background-color: #8c128c00 !important;
+}
+.avatar-info {
+    border-radius: var(--card-rounded) !important;
+    flex-direction: row !important;
+}
+
+.avatar-info > .avatar {
+    border-radius: 999px !important;
+}
+.avatar > .avatar {
+    border-radius: 999px !important;
+}
+
+.avatar-info > .username {
+    display: flex !important;
+    flex-direction: column !important;
+    font-size: 12px !important;
+    margin-left: 8px !important;
+    font-weight: bold;
+}
+
+.avatar-info > .username::before {
+    display: block;
+    width: 100%;
+    content: "ELEC";
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+.avatar-info,
+.user-info {
+    height: auto !important;
+    margin-right: 0.5rem;
+}
+/* Background */
+#app > div.interface > div.background {
+    background-image: var(--bg-image) !important;
+    background-size: cover !important;
+}
+
+#app > div.interface > div.background > div.pattern-bg,
+#app > div.interface > div.background > div.bg-radial {
+    display: none !important;
+}
+
+
+/* Inventory */
+.inventory > .left,
+.inventory > .left > .bottom {
+    background: transparent !important;
+}
+
+.inventory > .left > .bottom .gun {
+    background: var(--card-lighter) !important;
+    border-radius: var(--card-rounded);
+}
+
+.inventory > .content > .tab-bar {
+    background: transparent !important;
+}
+
+.inventory .gun .gun-img {
+    top: 0.75rem !important;
+    margin-top: 0 !important;
+    max-height: 4.75rem !important;
+}
+
+.inventory .gun .name-gun {
+    top: auto !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0.5rem 1rem !important;
+    justify-content: center !important;
+    font-size: 1.15rem !important;
+}
+
+.tab {
+    background: transparent !important;
+    transform: skew(0) !important;
+    border-radius: var(--card-rounded) !important;
+}
+
+.tab .name {
+    transform: skew(0) !important;
+}
+
+.tab.active,
+.tab.active-tab {
+    background: var(--dark-color) !important;
+    margin-top: 0 !important;
+    height: auto !important;
+    border: 0 !important;
+}
+.moneys {
+    display: block !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    border-radius: var(--card-rounded) !important;
+    overflow: hidden !important;
+}
+
+.moneys .money {
+    justify-content: flex-start !important;
+    margin-right: 0;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 1rem !important;
+    height: 45px !important;
+    border-radius: 0 !important;
+}
+
+.money.diamonds {
+    border-bottom-right-radius: var(--card-rounded);
+    border-bottom-left-radius: var(--card-rounded);
+}
+#left-icons {
+    bottom: unset !important;
+    background-color: var(--main) !important;
+    padding: 10px;
+    border-radius: 5px;
+    top: -3px;
+    left: 1270px;
+    opacity: var(--opacity);
+    text-shadow: var(--glow);
+    text-align: left;
+}
+
+/* Left Menu */
+.left-icons {
+    background: transparent !important;
+    position: relative;
+    bottom: 50px;
+}
+.left-icons,
+.icon-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    position: relative;
+    bottom: 50px;
+}
+.text-icon {
+    display: none !important;
+}
+.left-icons .icon-btn:hover {
+    border-top: transparent !important;
+    position: relative;
+    bottom: 50px;
+}
+.right-interface {
+    z-index: 1 !important;
+}
+.text-icon,
+.left-icons .icon-btn svg {
+    visibility: visible !important;
+}
+.soc-group:nth-child(1),
+.soc-group:nth-child(2) {
+    background: transparent !important;
+    border: none;
+    visibility: hidden;
+}
+.soc-group:nth-child(1):hover,
+.soc-group:nth-child(2):hover {
+    background: none !important;
+    transform: scale(1.5);
+    visibility: hidden;
+}
+#play-btn {
+    background: transparent !important;
+    box-shadow: 4px 4px 10px #0000 !important;
+}
+#play-btn .border-top,
+#play-btn .border-bottom {
+    background: none;
+}
+.select-mods-cont,
+.select-mods-cont > hr {
+    background: transparent!important;
+    margin-right: 500px;
+    border: 1px solid var(--asscentColor);
+}
+.custom-checkbox > input:checked + span[data-v-47e1b746]:before {
+    background-color: var(--asscentColor);
+    border-color: var(--asscentColor);
+}
+.soc-group[data-v-f6928a74],
+.text-soc[data-v-26102dd2] {
+    display: none !important;
+}
+.private-btn > span[data-v-47e1b746] {
+    content: url(https://media.discordapp.net/attachments/523517791886770188/1014943556806394018/261370-200.png);
+    position: fixed;
+    left: 40px;
+    width: 40px;
+}
+.select-mod,
+.select-region {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.select-regions-cont {
+    background: transparent !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+/* HUD */
+.state-cont .timer {
+      position: fixed;
+      width: 300px;
+      left: 10%;
+      margin-left: -160px ;
+      background: transparent !important;
+      box-shadow: none !important;
+}
+
+.cont-endurance {
+    margin-left: 1.5%;
+}
+.endurance-progress {
+    background-color: var(--asscentColor) !important;
+}
+
+
+/* Left Menu */
+.left-icons {
+    background: transparent !important;
+}
+.left-icons,
+.icon-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+#left-icons {
+    flex-direction: row-reverse;
+}
+.text-icon {
+    display: none !important;
+}
+.left-icons .icon-btn:hover {
+    border-top: transparent !important;
+}
+#left-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: absolute;
+    left: 13% !important;
+    top: 100% !important;
+    z-index: 0 !important;
+    transform-origin: top left;
+}
+.right-interface {
+    z-index: 1 !important;
+}
+.text-icon,
+.left-icons .icon-btn svg {
+    display: show !important;
+}
+
+/* diamonds */
+.diamonds[data-v-e3674cae]::before {
+    content: "";
+    display: block;
+    height: 25px;
+    /* Adjust as needed */
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* coins */
+.money[data-v-e3674cae]::before {
+    content: "";
+    display: block;
+    width: 25px;
+    /* Adjust as needed */
+    height: 20px;
+    /* Adjust as needed */
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.coin-icon[data-v-924e79c6] {
+    display: none;
+}
+/* avatar */
+.avatar[data-v-e3674cae]::before {
+    content: "";
+    display: block;
+    width: 60px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+    background-image: url('https://cdn.discordapp.com/emojis/1335054375151861791.webp?size=128');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.coin-icon[data-v-924e79c6] {
+    display: none;
+}
+/* profile */
+.avatar [data-v-e3674cae]::before {
+    content: "";
+    display: block;
+    width: 25px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+    background-image: url('https://cdn.discordapp.com/emojis/1335054375151861791.webp?size=128');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+}
+ .clan-tag {
+	animation: rainbow 1.3s linear infinite;
+}
+/* Background */
+.pattern-bg,
+.bg-radial {
+    display: none;
+}
+/* Loading Scene*/
+.loading-scene .progress {
+    background: -webkit-gradient(linear, left top, right top, from(#84a1ff), to(#39ffd4)) !important;
+    background: linear-gradient(to right, #84a1ff, #39ffd4) !important;
+}
+
+/* Background */
+.pattern-bg,
+.bg-radial {
+    display: none;
+}
+
+.background {
+    background: transparent !important;
+    border-radius: 0;
+}
+#version,
+#triangles,
+#fpsAvg {
+    display: none !important;
+}
+
+#overlay {
+    font-family: Consolas !important;
+    font-size: 10px !important;
+    top: 125px !important;
+    left: 30px !important;
+}
+.interface .moneys{
+    position: relative;
+    overflow: hidden;
+}
+.interface .moneys:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 70px;
+     background: url('file:///C:/Users/Public.DESKTOP-HMN7ECH/Desktop/download.png') 100% / 100% no-repeat;
+     left: 0;
+     top: -18px;
+     background-size: 300px;
+     background-position-x: -40px;
+}
+.tab-info,
+.tab-team-info {
+    display: flex !important;
+    box-shadow: unset !important;
+    border-radius: 0.5rem !important;
+    max-width: 30rem !important;
+    top: 0 !important;
+    right: 0 !important;
+    position: fixed;
+    margin: 0.5rem !important;
+    padding: 0.15rem !important;
+}
+
+.tab-team-info .players-cont {
+    flex-direction: column !important;
+}
+
+.tab-info .player-list,
+.tab-team-info .player-list {
+    margin: unset !important;
+    gap: 0.25rem;
+}
+
+.tab-info > .head,
+.tab-team-info > .head {
+    display: none;
+}
+
+.tab-team-info .player-list:nth-child(1)::before {
+    content: "RED";
+    width: 100%;
+    text-align: left;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+    background-color: #ff4d42;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+}
+
+.tab-team-info .player-list:nth-child(2)::before {
+    content: "BLUE";
+    width: 100%;
+    text-align: left;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+    background-color: #0d6dc6;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+}
+
+.tab-info .list,
+.tab-team-info .player-list > .list {
+    order: 999;
+}
+
+.tab-info .players-wrap,
+.tab-team-info .players-wrap {
+    padding: 0.25rem;
+}
+
+.tab-info .player-cont,
+.tab-team-info .player-cont {
+    margin: unset;
+}
+
+.kill-bar-cont {
+    right: 31.5rem !important;
+    top: 0.5rem !important;
+}
+Tab.css
+2 KB
