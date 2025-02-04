@@ -1055,3 +1055,21 @@ hr::after {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
+.left-interface .progress {
+    background: -webkit-gradient(linear, left top, right top, from(#e90617), to(#1b06bb)) !important;
+    background: linear-gradient(to right, #e90617, #1b06bb) !important;
+}
+.quest .progress-line .progress {
+	background: -webkit-gradient(linear, left top, right top, from(#e90617), to(#221c35)) !important;
+    background: linear-gradient(to right, #e90617, #221c35) !important;
+}
+.select-regions-cont {
+    border: 1px solid #e90617 !important;
+    border-radius: 5px !important;
+    background: #221c35 !important
+
+}
+.profile .progress {
+    background: -webkit-gradient(linear, left top, right top, from(#e90617), to(#221c35)) !important;
+    background: linear-gradient(to right, #e90617, #221c35) !important;
+}
