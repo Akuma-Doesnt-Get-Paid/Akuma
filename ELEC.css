@@ -1036,3 +1036,25 @@ repeat;
         background-position: 0 100vh
     }
 }
+.select-mods-cont {
+    border: 1px solid #06bbbb !important;
+    border-radius: 5px !important;
+    background: #221c35 !important;
+    overflow: visible;
+    z-index: 999 !important;
+    width: 1200px !important;
+    height: 1600px !important;
+    left: -400px !important;
+    top: -470px !important;
+}
+.container-card {
+    border: 1px solid #06bbbb !important;
+    border-radius: 5px !important;
+    background: #221c35 !important;
+    overflow: visible;
+    z-index: 999 !important;
+    width: 1300px !important;
+    height: 700px !important;
+    left: -1.0px !important;
+    top: 0px !important;
+}
