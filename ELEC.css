@@ -420,17 +420,6 @@
     transition: all 0.5s ease-in-out;
 }
 
-/* Custom Backgorund */
-#app > div.interface.text-2 > div.background {
-background-image: var(--bg-image) !important;
-background-size: cover !important;
-}
-/* Custom Backgorund */
-#app > div.interface.text-2 > div.background {
-    background-image: var(--bg-image) !important;
-    background-size: cover !important;
-}
-
 .left-icons {
 	border-radius: 900px !important;
 	background-color: #741b7400 !important;
@@ -498,17 +487,6 @@ background-size: cover !important;
     height: auto !important;
     margin-right: 0.5rem;
 }
-/* Background */
-#app > div.interface > div.background {
-    background-image: var(--bg-image) !important;
-    background-size: cover !important;
-}
-
-#app > div.interface > div.background > div.pattern-bg,
-#app > div.interface > div.background > div.bg-radial {
-    display: none !important;
-}
-
 
 /* Inventory */
 .inventory > .left,
@@ -557,39 +535,7 @@ background-size: cover !important;
     height: auto !important;
     border: 0 !important;
 }
-.moneys {
-    display: block !important;
-    margin-left: 0 !important;
-    margin-top: 0 !important;
-    border-radius: var(--card-rounded) !important;
-    overflow: hidden !important;
-}
 
-.moneys .money {
-    justify-content: flex-start !important;
-    margin-right: 0;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 0 1rem !important;
-    height: 45px !important;
-    border-radius: 0 !important;
-}
-
-.money.diamonds {
-    border-bottom-right-radius: var(--card-rounded);
-    border-bottom-left-radius: var(--card-rounded);
-}
-#left-icons {
-    bottom: unset !important;
-    background-color: var(--main) !important;
-    padding: 10px;
-    border-radius: 5px;
-    top: -3px;
-    left: 1270px;
-    opacity: var(--opacity);
-    text-shadow: var(--glow);
-    text-align: left;
-}
 
 /* Left Menu */
 .left-icons {
@@ -616,10 +562,7 @@ background-size: cover !important;
 .right-interface {
     z-index: 1 !important;
 }
-.text-icon,
-.left-icons .icon-btn svg {
-    visibility: visible !important;
-}
+
 .soc-group:nth-child(1),
 .soc-group:nth-child(2) {
     background: transparent !important;
@@ -730,31 +673,6 @@ background-size: cover !important;
     display: show !important;
 }
 
-/* diamonds */
-.diamonds[data-v-e3674cae]::before {
-    content: "";
-    display: block;
-    height: 25px;
-    /* Adjust as needed */
-    background-image: url('');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-/* coins */
-.money[data-v-e3674cae]::before {
-    content: "";
-    display: block;
-    width: 25px;
-    /* Adjust as needed */
-    height: 20px;
-    /* Adjust as needed */
-    background-image: url('');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.coin-icon[data-v-924e79c6] {
-    display: none;
-}
 /* avatar */
 .avatar[data-v-e3674cae]::before {
     content: "";
@@ -767,9 +685,7 @@ background-size: cover !important;
     background-size: contain;
     background-repeat: no-repeat;
 }
-.coin-icon[data-v-924e79c6] {
-    display: none;
-}
+
 /* profile */
 .avatar [data-v-e3674cae]::before {
     content: "";
@@ -975,7 +891,7 @@ hr {
 
 hr::before {
     z-index: 1;
-    content: "CSS by Xyrrm#9667";
+    content: "CSS by PPUGCLAY";
     color: var(--accentColor);
     position: absolute;
     top: 2px;
@@ -996,10 +912,7 @@ hr::after {
 #logo {
     content: url('https://akuma-doesnt-get-paid.github.io/Akuma/Untitled.png');
 }
-/* Animations */
-.clan-tag {
-    animation: glow 0.8s ease-in-out infinite alternate;
-}
+
 
 @keyframes loopPattern-data-v-50a88834 {
     0% {
@@ -1072,4 +985,54 @@ hr::after {
 .profile .progress {
     background: -webkit-gradient(linear, left top, right top, from(#e90617), to(#221c35)) !important;
     background: linear-gradient(to right, #e90617, #221c35) !important;
+}
+/* Currently playing */
+
+#playerholderelement {
+    bottom: unset !important;
+    background-color: var(--main) !important;
+    padding: 10px;
+    border-radius: 5px;
+    top: 170px;
+    left: -1px;
+    opacity: var(--opacity);
+    text-shadow: var(--glow);
+    text-align: left;
+}
+/* Custom Backgorund */
+#app > div.interface.text-2 > div.background {
+background-image: var(--bg-image) !important;
+background-size: cover !important;
+}
+/* Custom Backgorund */
+#app > div.interface.text-2 > div.background {
+    background-image: var(--bg-image) !important;
+    background-size: cover !important;
+}
+repeat;
+
+    background-size: cover;
+    -webkit-animation: loopPattern 40s linear infinite;
+    animation: loopPattern 40s linear infinite;
+    opacity: unset !important;
+}
+
+@-webkit-keyframes loopPattern {
+    0% {
+        background-position: 0 0 !important
+    }
+
+    to {
+        background-position: 0 100vh
+    }
+}
+
+@keyframes loopPattern {
+    0% {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 0 100vh
+    }
 }
