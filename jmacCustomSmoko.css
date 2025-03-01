@@ -187,7 +187,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background: url("https://cdn.discordapp.com/emojis/1174612212841725972.webp?size=128");
+    background: url("https://i.imgur.com/jBpCjY3.gif");
     background-size: cover;
     background-position: center;
     transform: rotate(90deg) scale(0.8);
@@ -682,7 +682,7 @@
     /* Adjust as needed */
     height: 200px;
     /* Adjust as needed */
-    background-image: url('https://cdn.discordapp.com/emojis/1174612212841725972.webp?size=128');
+    background-image: url('https://i.imgur.com/jBpCjY3.gif');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -695,7 +695,7 @@
     /* Adjust as needed */
     height: 200px;
     /* Adjust as needed */
-    background-image: url('https://cdn.discordapp.com/emojis/1174612212841725972.webp?size=128');
+    background-image: url('https://i.imgur.com/jBpCjY3.gif');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -911,7 +911,7 @@ hr::after {
     z-index: 0;
 }
 #logo {
-    content: url('https://cdn.discordapp.com/emojis/1174612212841725972.webp?size=128');
+    content: url('https://i.imgur.com/jBpCjY3.gif');
 }
 
 
