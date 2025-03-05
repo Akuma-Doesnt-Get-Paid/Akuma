@@ -158,3 +158,16 @@
     opacity: 1 !important;
     transition: all 0.5s ease-in-out;
 }
+/* Currently playing */
+
+#playerholderelement {
+    bottom: unset !important;
+    background-color: var(--main) !important;
+    padding: 10px;
+    border-radius: 5px;
+    top: 600px;
+    left: 1310px;
+    opacity: var(--opacity);
+    text-shadow: var(--glow);
+    text-align: left;
+}
